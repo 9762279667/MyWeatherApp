@@ -1,0 +1,31 @@
+apply plugin: 'com.android.application'
+apply plugin: 'let'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.bajajallianz.myweatherapp"
+        minSdkVersion 24
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    // library to make HTTP requests
+    compile 'com.android.volley:volley:1.0.0'
+    // library to load images from links and display it in the App
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    // RecyclerView
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+}

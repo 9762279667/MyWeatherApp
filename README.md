@@ -1,2 +1,2 @@
 # MyWeatherApp
-this edit for merge demo, making at local side
+This file is edit, for demo of merge file
